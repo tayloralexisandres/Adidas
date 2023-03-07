@@ -17,10 +17,10 @@ public class BasePage {
     @FindBy(xpath = "//div[@class='list-group']//a")
     public List<WebElement> catagories;
 
-  // @FindBy(xpath = "(//tr[@class='success']//td/a)[1]")
-  // public WebElement deleteDell;
-    @FindBy(xpath = "//tbody/tr[1]/td[4]/a[1]")
-    public WebElement deleteDell;
+   @FindBy(xpath = "(//tr[@class='success']//td/a)[1]")
+   public WebElement deleteDell;
+   // @FindBy(xpath = "//tbody/tr[1]/td[4]/a[1]")
+   // public WebElement deleteDell;
    @FindBy(xpath = "//button[.='Place Order']")
    public WebElement placeOrderBtn;
    @FindBy(id="name")

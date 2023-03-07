@@ -11,7 +11,7 @@ Feature: Web automation checks
     And user clicks place order
     And user fills out form
     And user clicks purchase
-   Then Capture and log id and amount
+    Then Capture and log id and amount
     Then assert purchase amount equals expected
-    Then click ok
+    Then user click ok
 

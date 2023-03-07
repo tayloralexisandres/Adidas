@@ -113,7 +113,7 @@ public class adidas_step_def {
         for (WebElement each : basePage.idAndAccount) {
            System.out.println(each.getText());
             List<String> list= new ArrayList<String>(List.of(each.getText().split(" ")));
-            System.out.println(list.get(0).toString());
+           // System.out.println(list.get(0).toString());
             Assert.assertTrue(!(list.get(0).isEmpty()));
 
 
@@ -127,7 +127,7 @@ public class adidas_step_def {
         for (WebElement each : basePage.idAndAccount) {
             System.out.println(each.getText());
             List<String> list= new ArrayList<String>(List.of(each.getText().split(" ")));
-            System.out.println(list.get(1).toString());
+            //System.out.println(list.get(1).toString());
             Assert.assertTrue(!(list.get(1).isEmpty()));
 
 
