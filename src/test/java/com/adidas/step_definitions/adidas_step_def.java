@@ -10,14 +10,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+
+
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
 
 public class adidas_step_def {
@@ -40,7 +40,7 @@ public class adidas_step_def {
         }
     }
     @When("user navigates to Labtop-adds Sony vaio i5 to cart")
-    public void user_navigates_to_labtop_adds_sony_vaio_i5_to_cart() throws InterruptedException {
+    public void user_navigates_to_labtop_adds_sony_vaio_i5_to_cart()  {
         BasePage.clicklink(Driver.getDriver(),"Laptops");
         BrowserUtils.sleep(1);
        BasePage.clicklink(Driver.getDriver(),"Sony vaio i5");
@@ -55,7 +55,7 @@ public class adidas_step_def {
 
     }
     @When("user adds Dell i7 8gb to cart")
-    public void user_adds_dell_i7_8gb_to_cart() throws InterruptedException {
+    public void user_adds_dell_i7_8gb_to_cart()  {
 
         BasePage.clicklink(Driver.getDriver(),"Home");
 
@@ -74,7 +74,7 @@ public class adidas_step_def {
 
     }
     @When("user navigates to cart- deletes Dell i7 8bg from cart")
-    public void user_navigates_to_cart_deletes_dell_i7_8bg_from_cart() throws InterruptedException {
+    public void user_navigates_to_cart_deletes_dell_i7_8bg_from_cart()  {
 
         BasePage.clicklink(Driver.getDriver(),"Cart");
         basePage.deleteDell.click();
@@ -87,13 +87,13 @@ public class adidas_step_def {
 
     }
     @When("user clicks place order")
-    public void user_clicks_place_order() throws InterruptedException {
+    public void user_clicks_place_order()  {
         BrowserUtils.sleep(2);
 
         basePage.placeOrderBtn.click();
     }
     @When("user fills out form")
-    public void user_fills_out_form()throws InterruptedException {
+    public void user_fills_out_form() {
         Faker faker = new Faker();
         BrowserUtils.sleep(3);
         basePage.name.sendKeys(faker.name().fullName());
@@ -112,9 +112,9 @@ public class adidas_step_def {
     public void capture_and_log_id_and_amount() {
         for (WebElement each : basePage.idAndAccount) {
            System.out.println(each.getText());
-            List<String> list= new ArrayList<String>(List.of(each.getText().split(" ")));
+            List<String> list= new ArrayList<>(List.of(each.getText().split(" ")));
            // System.out.println(list.get(0).toString());
-            Assert.assertTrue(!(list.get(0).isEmpty()));
+            Assert.assertFalse(list.get(0).isEmpty());
 
 
 
@@ -126,9 +126,9 @@ public class adidas_step_def {
 
         for (WebElement each : basePage.idAndAccount) {
             System.out.println(each.getText());
-            List<String> list= new ArrayList<String>(List.of(each.getText().split(" ")));
+            List<String> list= new ArrayList<>(List.of(each.getText().split(" ")));
             //System.out.println(list.get(1).toString());
-            Assert.assertTrue(!(list.get(1).isEmpty()));
+            Assert.assertFalse(list.get(1).isEmpty());
 
 
 
