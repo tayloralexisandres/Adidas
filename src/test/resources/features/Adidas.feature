@@ -3,7 +3,7 @@ Feature: Web automation checks
 
   @tay
   Scenario: Verify SDET can automate this scenario
-    Given user id on the webpage
+    Given user is on the webpage
     When user navigates product categories-Phones, Labtops and Monitors
     And user navigates to Labtop-adds Sony vaio i5 to cart
     And user adds Dell i7 8gb to cart

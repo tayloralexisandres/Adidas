@@ -26,7 +26,7 @@ public class adidas_step_def {
 
 
 
-    @Given("user id on the webpage")
+    @Given("user is on the webpage")
     public void user_id_on_the_webpage() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
@@ -115,9 +115,6 @@ public class adidas_step_def {
             List<String> list= new ArrayList<>(List.of(each.getText().split(" ")));
            // System.out.println(list.get(0).toString());
             Assert.assertFalse(list.get(0).isEmpty());
-
-
-
         }
 
     }
